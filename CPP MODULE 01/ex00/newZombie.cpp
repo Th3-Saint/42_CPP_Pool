@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   newZombie.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrobaii <mrobaii@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/20 19:42:09 by mrobaii           #+#    #+#             */
-/*   Updated: 2022/12/20 22:34:40 by mrobaii          ###   ########.fr       */
+/*   Created: 2022/12/20 22:36:22 by mrobaii           #+#    #+#             */
+/*   Updated: 2022/12/20 22:36:36 by mrobaii          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int main()
+Zombie* newZombie( std::string name )
 {
-	Zombie *zombieA;
-	Zombie *zombieB;
-	zombieA = newZombie("Zombie A");
-	zombieA->announce();
-	zombieB = newZombie("Zombie B");
-	zombieB->announce();
-	randomChump("Zombie C");
-	delete zombieA;
-	delete zombieB;
+	Zombie *newZombie;
 	
-	
-	
+	newZombie = new Zombie(name);
+	return (newZombie);
 }

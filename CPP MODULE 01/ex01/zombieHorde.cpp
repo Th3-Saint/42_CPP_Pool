@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrobaii <mrobaii@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/20 19:42:09 by mrobaii           #+#    #+#             */
-/*   Updated: 2022/12/20 22:34:40 by mrobaii          ###   ########.fr       */
+/*   Created: 2022/12/20 22:54:21 by mrobaii           #+#    #+#             */
+/*   Updated: 2022/12/20 23:13:27 by mrobaii          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int main()
+/*--------		Functions COnstactor		--------------*/
+
+Zombie* zombieHorde( int N, std::string name )
 {
-	Zombie *zombieA;
-	Zombie *zombieB;
-	zombieA = newZombie("Zombie A");
-	zombieA->announce();
-	zombieB = newZombie("Zombie B");
-	zombieB->announce();
-	randomChump("Zombie C");
-	delete zombieA;
-	delete zombieB;
-	
-	
-	
+	Zombie *Zombies;
+	int	i;
+
+	i = 0;
+	Zombies = new Zombie[N];
+	while (i < N)
+		Zombies[i++].SetName(name);
+
+	return (Zombies);
 }

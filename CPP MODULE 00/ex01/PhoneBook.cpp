@@ -6,7 +6,7 @@
 /*   By: mrobaii <mrobaii@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 19:08:38 by mrobaii           #+#    #+#             */
-/*   Updated: 2022/12/20 19:20:34 by mrobaii          ###   ########.fr       */
+/*   Updated: 2022/12/20 22:41:29 by mrobaii          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,11 @@ PhoneBook::PhoneBook(void)
 	std::cout << "ADD		: " << "<< Create a new contact >>" << "\n";
 	std::cout << "SEARCH		: " << "<< Search for an existing contact >>" << "\n";
 	std::cout << "EXIT		: " << "<< Exit the program >>" << "\n";
-	return ;
 }
 
 PhoneBook::~PhoneBook(void)
 {
 	std::cout << "Destructor Called" << std::endl;
-	return ;
 }
 
 Contact::Contact(void)
@@ -38,13 +36,11 @@ Contact::Contact(void)
 	Contact::_nickname = "";
 	Contact::_darksecret = "";
 	Contact::_PhoneNumber = "";
-	return ;
 }
 
 Contact::~Contact(void)
 {
 	std::cout << "Destructor Called" << std::endl;
-	return ;
 }
 
 

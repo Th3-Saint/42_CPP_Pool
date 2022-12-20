@@ -5,25 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrobaii <mrobaii@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/20 19:42:09 by mrobaii           #+#    #+#             */
-/*   Updated: 2022/12/20 22:34:40 by mrobaii          ###   ########.fr       */
+/*   Created: 2022/12/20 23:04:38 by mrobaii           #+#    #+#             */
+/*   Updated: 2022/12/20 23:50:22 by mrobaii          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int main()
+int main( void )
 {
-	Zombie *zombieA;
-	Zombie *zombieB;
-	zombieA = newZombie("Zombie A");
-	zombieA->announce();
-	zombieB = newZombie("Zombie B");
-	zombieB->announce();
-	randomChump("Zombie C");
-	delete zombieA;
-	delete zombieB;
+	Zombie *Zombies;
 	
-	
-	
+	Zombies = zombieHorde(10, "Zombie");
+	for(int i = 0; i < 10; i++)
+		Zombies[i].announce();
+	delete[] Zombies;
 }

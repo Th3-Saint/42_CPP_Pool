@@ -5,29 +5,38 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrobaii <mrobaii@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/20 21:34:13 by mrobaii           #+#    #+#             */
-/*   Updated: 2022/12/20 22:37:33 by mrobaii          ###   ########.fr       */
+/*   Created: 2022/12/20 22:58:44 by mrobaii           #+#    #+#             */
+/*   Updated: 2022/12/20 23:38:09 by mrobaii          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-/*--------	Default Constractor	-------------*/
-Zombie::Zombie( std::string name )
+/*--------		Default Constractor		--------------*/
+
+Zombie::Zombie( void )
 {
-	this->name = name;
 }
-/*--------	Default Destractor	-------------*/
+
+/*--------		Default Destractor		--------------*/
 
 Zombie::~Zombie( void )
 {
-	std::cout << name << ": Destroyed" << std::endl;
+	std::cout << this->name <<  " Destroyed" << "\n";
 }
 
-/*--------	Memeber Functions	-------------*/
+/*----------		memeber functions		--------------*/
 
-void	Zombie::announce( void )
+
+void Zombie::SetName(std::string name)
 {
-	std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << "\n";
+	this->name = name;
 	return ;
 }
+
+void Zombie::announce( void )
+{
+	std::cout << this->name << ": Moar  BraiiiiiiinnnzzzZ..." << "\n";
+	return ;
+}
+

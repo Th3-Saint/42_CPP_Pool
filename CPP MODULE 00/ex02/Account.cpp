@@ -6,7 +6,7 @@
 /*   By: mrobaii <mrobaii@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 09:42:39 by mrobaii           #+#    #+#             */
-/*   Updated: 2022/12/20 15:53:27 by mrobaii          ###   ########.fr       */
+/*   Updated: 2022/12/20 22:41:57 by mrobaii          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ Account::Account( int initial_deposit )
 	this->_nbDeposits = 0;
 	_displayTimestamp();
 	std::cout << "index:" << _accountIndex << ";amount:" << _amount << ";created\n";
-	return ;
 }
 
 int	Account::_nbAccounts = 0;
@@ -39,7 +38,6 @@ Account::~Account( void )
 {
 	_displayTimestamp();
 	std::cout << "amount:" << _amount << ";closed" << std::endl;
-	return ;
 }
 /*------------	GET ACCOUNTS DETAILS -------------------*/
 
