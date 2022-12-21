@@ -6,7 +6,7 @@
 /*   By: mrobaii <mrobaii@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 22:50:06 by mrobaii           #+#    #+#             */
-/*   Updated: 2022/12/20 23:37:46 by mrobaii          ###   ########.fr       */
+/*   Updated: 2022/12/21 08:29:21 by mrobaii          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,14 @@ class Zombie
 {
 	private:
 		std::string name;
+		static int	_nbofZombies;
 
 	public:
 		Zombie( void );
 		void announce( void );
 		void SetName(std::string name);
+		int get_val(void) const;
+		int index;
 		~Zombie( void );
 };
 
