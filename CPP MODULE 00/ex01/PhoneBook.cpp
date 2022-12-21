@@ -6,7 +6,7 @@
 /*   By: mrobaii <mrobaii@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 19:08:38 by mrobaii           #+#    #+#             */
-/*   Updated: 2022/12/20 22:41:29 by mrobaii          ###   ########.fr       */
+/*   Updated: 2022/12/21 10:41:29 by mrobaii          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -216,7 +216,7 @@ void	checker(void)
 {
 	if (std::cin.eof())
 	{
-		std::cout << "go fuck your self stdin closed\n";	
+		std::cout << "STDING CLOSED\n";	
 		exit(0);
 	}
 }
