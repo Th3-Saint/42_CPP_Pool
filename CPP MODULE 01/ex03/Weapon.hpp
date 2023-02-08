@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrobaii <mrobaii@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lucifer <lucifer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/21 11:57:44 by mrobaii           #+#    #+#             */
-/*   Updated: 2022/12/21 13:57:02 by mrobaii          ###   ########.fr       */
+/*   Created: 2023/02/08 17:08:06 by lucifer           #+#    #+#             */
+/*   Updated: 2023/02/08 17:26:44 by lucifer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,10 @@ class Weapon
 {
 	private:
 		std::string type;
-
 	public:
-		Weapon( std::string type );
-		const std::string& getType( void );
-		void	setType(std::string type);
-	~Weapon ( void );
+		Weapon();
+		Weapon(std::string newtype);
+		const std::string& getType ( void ) const;
+		void setType(std::string newType);
 };
 #endif

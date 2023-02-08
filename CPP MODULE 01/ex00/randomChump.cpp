@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   randomChump.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrobaii <mrobaii@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lucifer <lucifer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/20 22:35:44 by mrobaii           #+#    #+#             */
-/*   Updated: 2022/12/20 22:36:03 by mrobaii          ###   ########.fr       */
+/*   Created: 2023/02/08 15:27:05 by lucifer           #+#    #+#             */
+/*   Updated: 2023/02/08 15:30:16 by lucifer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 void randomChump( std::string name )
 {
 	Zombie newZombie(name);
+	
 	newZombie.announce();
-
-	return ;
 }

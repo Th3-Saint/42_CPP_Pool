@@ -3,34 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrobaii <mrobaii@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lucifer <lucifer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/21 12:09:07 by mrobaii           #+#    #+#             */
-/*   Updated: 2022/12/21 13:59:00 by mrobaii          ###   ########.fr       */
+/*   Created: 2023/02/08 17:15:42 by lucifer           #+#    #+#             */
+/*   Updated: 2023/02/08 17:28:37 by lucifer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
 
-/*---------- Default Constractror -------------*/
-
-Weapon::Weapon(std::string type)
+Weapon::Weapon(std::string newType): type(newType)
 {
-	this->type = type;
+		
 }
 
-const std::string& Weapon::getType( void )
+const std::string& Weapon::getType ( void ) const
 {
-	return (this->type);
+	return (type);
 }
 
-void	Weapon::setType(std::string type)
+void Weapon::setType(std::string newType)
 {
-	this->type = type;
-	return ;
-}
-
-Weapon::~Weapon ( void )
-{
-	std::cout << "Destractor called" << "\n";
+	this->type = newType;
 }

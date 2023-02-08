@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucifer <lucifer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/08 15:45:14 by lucifer           #+#    #+#             */
-/*   Updated: 2023/02/08 16:13:01 by lucifer          ###   ########.fr       */
+/*   Created: 2023/02/08 18:05:22 by lucifer           #+#    #+#             */
+/*   Updated: 2023/02/08 18:08:47 by lucifer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanB.hpp"
 
-Zombie* zombieHorde( int N, std::string name )
+void HumanB::attack( void )
 {
-	Zombie *Zombies;
+	std::cout << name << " attacks with their " << WeaponB.getType() << "\n";
+}
 
-	Zombies = new Zombie[N];
+HumanB::HumanB(std::string newName, Weapon newWeapon): name(newName), WeaponB(newWeapon)
+{
 	
-	for(int i = 0; i < N; i++)
-		Zombies[i].setName(name);
-	return (Zombies);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrobaii <mrobaii@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lucifer <lucifer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/21 08:48:21 by mrobaii           #+#    #+#             */
-/*   Updated: 2022/12/21 08:56:13 by mrobaii          ###   ########.fr       */
+/*   Created: 2023/02/08 16:19:03 by lucifer           #+#    #+#             */
+/*   Updated: 2023/02/08 16:44:36 by lucifer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,24 @@
 
 int main()
 {
-	std::string str = "HI THIS IS BRAIN";
-	std::string& stringREF = str;
-	std::string *stringPTR;
-
-	stringPTR = &str;
-	std::cout << "The memory address of the string variable: " << &str << "\n";
-	std::cout << "The memory address held by stringPTR: " << stringPTR << "\n";
-	std::cout << "The memory address held by stringREF: " << &stringREF << "\n\n";
+	std::string name = "HI THIS IS BRAIN";
+	std::string *stringPTR = &name;
+	std::string& stringREF = name;
 	
-	std::cout << "--------------------------------------------------------------\n\n";
+	// Adresses of string
 	
-	std::cout << "The value of the string variable: " << str << "\n";
+	std::cout << "The memory address of the string variable: ";
+	std::cout << &name << std::endl;
+	std::cout << "The memory address held by stringPTR: ";
+	std::cout << stringPTR << std::endl;
+	std::cout << "The memory address held by stringREF: ";
+	std::cout << &stringREF << std::endl;
+	std::cout << "-------------------------------------------------\n";
+	// Values of string
+	
+	std::cout << "The value of the string variable: " << name << "\n";
 	std::cout << "The value pointed to by stringPTR: " << *stringPTR << "\n";
-	std::cout << "The value pointed to by stringPTR: " << stringREF << "\n";
-
-	return (0);
+	std::cout << "The value pointed to by stringREF: " << stringREF << "\n";
 	
-}
+	return (0);
+	}

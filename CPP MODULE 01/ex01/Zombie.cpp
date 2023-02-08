@@ -3,46 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrobaii <mrobaii@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lucifer <lucifer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/20 22:58:44 by mrobaii           #+#    #+#             */
-/*   Updated: 2022/12/21 11:49:49 by mrobaii          ###   ########.fr       */
+/*   Created: 2023/02/08 15:41:58 by lucifer           #+#    #+#             */
+/*   Updated: 2023/02/08 16:10:43 by lucifer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-/*--------		Default Constractor		--------------*/
+int Zombie::i = 1;
 
-Zombie::Zombie( void )
+Zombie::Zombie()
 {
-	_nbofZombies++;
-	this->index = _nbofZombies - 1;
+	std::cout << i << ": Created\n";
+	i++;
 }
-/*--------		Default Destractor		--------------*/
-
-Zombie::~Zombie( void )
+void	Zombie::announce( void )
 {
-	std::cout << this->name << " " << index <<  " Destroyed" << "\n";
+	std::cout << name << ": BraiiiiiiinnnzzzZ...\n";
 }
 
-/*----------		memeber functions		--------------*/
+Zombie::~Zombie()
+{
+	std::cout << --i << ": Destoryed\n";
+}
 
-
-void Zombie::SetName(std::string name)
+void Zombie::setName(std::string name)
 {
 	this->name = name;
-	return ;
 }
-
-int Zombie::get_val(void) const{
-	return (index);
-}
-
-void Zombie::announce( void )
-{
-	std::cout << this->name << " " << index << ": Moar  BraiiiiiiinnnzzzZ..." << "\n";
-	return ;
-}
-
-int Zombie::_nbofZombies = 0;

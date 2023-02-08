@@ -3,21 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrobaii <mrobaii@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lucifer <lucifer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/20 23:04:38 by mrobaii           #+#    #+#             */
-/*   Updated: 2022/12/21 11:48:32 by mrobaii          ###   ########.fr       */
+/*   Created: 2023/02/08 15:47:05 by lucifer           #+#    #+#             */
+/*   Updated: 2023/02/08 15:53:57 by lucifer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int main( void )
+int main()
 {
 	Zombie *Zombies;
-	
-	Zombies = zombieHorde(10, "Zombie");
-	for(int i = 0; i < 10; i++)
+
+	Zombies = zombieHorde(10, "Foo");
+	for (int i = 0; i < 10; i++)
 		Zombies[i].announce();
 	delete[] Zombies;
+	return (0);
 }
