@@ -1,31 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.cpp                                         :+:      :+:    :+:   */
+/*   ft_replace_file.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrobaii <mrobaii@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/08 18:05:22 by lucifer           #+#    #+#             */
-/*   Updated: 2023/02/09 02:02:51 by mrobaii          ###   ########.fr       */
+/*   Created: 2023/02/11 01:04:36 by mrobaii           #+#    #+#             */
+/*   Updated: 2023/02/11 01:11:01 by mrobaii          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanB.hpp"
-
-void HumanB::attack( void )
-{
-	if (WeaponB == nullptr)
-		std::cout << name << " Has no weapon\n";
-	else
-		std::cout << name << " attacks with their " << WeaponB->getType() << "\n";
-}
-
-HumanB::HumanB(std::string newName): name(newName), WeaponB(nullptr)
-{
-	
-}
-
-void HumanB::setWeapon(Weapon &newWeapon)
-{
-	WeaponB = &newWeapon;
-}
+#ifndef FT_REPLACE_FILE_HPP
+#define FT_REPLACE_FILE_HPP
+#include <fstream>
+#include <string>
+#include <iostream>
+#endif

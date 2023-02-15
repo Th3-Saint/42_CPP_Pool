@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.hpp                                         :+:      :+:    :+:   */
+/*   FileReplace.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrobaii <mrobaii@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/08 18:02:07 by lucifer           #+#    #+#             */
-/*   Updated: 2023/02/09 01:57:26 by mrobaii          ###   ########.fr       */
+/*   Created: 2023/02/11 01:04:36 by mrobaii           #+#    #+#             */
+/*   Updated: 2023/02/15 03:26:16 by mrobaii          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANB_HPP
-#define HUMANB_HPP
-#include "Weapon.hpp"
+#ifndef FILEREPLACE_HPP
+#define FILEREPLACE_HPP
+#include <fstream>
+#include <string>
+#include <iostream>
 
-class HumanB
+class FileReplace
 {
 	private:
-		std::string name;
-		Weapon *WeaponB;
+		std::string m_infile;
+		std::string m_outfile;
+		std::string m_search;
+		std::string m_replace;
+		
 	public:
-		void attack( void );
-		HumanB();
-		HumanB(std::string newName);
-		void setWeapon(Weapon &newWeapon);
-
+		FileReplace();
+		FileReplace(std::string &infile, std::string &outfile, const std::string &search,
+		const std::string &replace);
+		~FileReplace();
+		bool replace();
 };
-
 #endif
