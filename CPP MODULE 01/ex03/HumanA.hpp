@@ -6,7 +6,7 @@
 /*   By: mrobaii <mrobaii@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 17:12:01 by lucifer           #+#    #+#             */
-/*   Updated: 2023/02/09 01:23:53 by mrobaii          ###   ########.fr       */
+/*   Updated: 2023/02/19 03:18:12 by mrobaii          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 class HumanA
 {
 	private:
-		Weapon& weaponA;
 		std::string name;
+		Weapon& weaponA;
 	public:
 		void attack( void );
 		HumanA();

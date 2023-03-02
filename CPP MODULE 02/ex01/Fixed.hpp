@@ -1,33 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FileReplace.hpp                                    :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrobaii <mrobaii@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/11 01:04:36 by mrobaii           #+#    #+#             */
-/*   Updated: 2023/03/02 03:12:42 by mrobaii          ###   ########.fr       */
+/*   Created: 2023/02/21 08:33:08 by mrobaii           #+#    #+#             */
+/*   Updated: 2023/03/01 05:35:47 by mrobaii          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FILEREPLACE_HPP
-#define FILEREPLACE_HPP
-#include <fstream>
-#include <string>
+#ifndef FIXED_HPP
+#define FIXED_HPP
 #include <iostream>
-simo simo simo simo simo
-class FileReplace
+#include <cmath>
+
+class Fixed
 {
 	private:
-		std::string m_infile;
-		std::string m_outfile;
-		std::string m_search;
-		std::string m_replace;
-		
+		int _raw;
+		static const int _fractional;
 	public:
-		FileReplace();
-		FileReplace(std::string infile, std::string outfile, std::string search, std::string replace);
-		~FileReplace();
-		bool replace( void );
+		Fixed();
+		Fixed(const int value);
+		Fixed(const float value);
+		Fixed(const Fixed& other);
+		Fixed& operator=(const Fixed& other);
+		~Fixed();
+		int getRawBits( void ) const;
+		void setRawBits(int const _raw);
+		float toFloat( void ) const;
+		int toInt( void ) const;
 };
+std::ostream& operator<<(std::ostream& os, const Fixed& other);
 #endif

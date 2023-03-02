@@ -6,7 +6,7 @@
 /*   By: mrobaii <mrobaii@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 18:05:22 by lucifer           #+#    #+#             */
-/*   Updated: 2023/02/09 02:02:51 by mrobaii          ###   ########.fr       */
+/*   Updated: 2023/02/19 03:09:48 by mrobaii          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void HumanB::attack( void )
 {
-	if (WeaponB == nullptr)
+	if (WeaponB == NULL)
 		std::cout << name << " Has no weapon\n";
 	else
 		std::cout << name << " attacks with their " << WeaponB->getType() << "\n";
 }
 
-HumanB::HumanB(std::string newName): name(newName), WeaponB(nullptr)
+HumanB::HumanB(std::string newName): name(newName), WeaponB(NULL)
 {
 	
 }

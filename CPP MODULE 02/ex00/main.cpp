@@ -5,30 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrobaii <mrobaii@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/08 18:00:59 by lucifer           #+#    #+#             */
-/*   Updated: 2023/02/19 03:22:27 by mrobaii          ###   ########.fr       */
+/*   Created: 2023/02/21 01:32:49 by mrobaii           #+#    #+#             */
+/*   Updated: 2023/02/21 03:14:57 by mrobaii          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.hpp"
-#include "HumanB.hpp"
+#include "Fixed.hpp"
+
 
 int main()
 {
-	{
-		Weapon club = Weapon("crude spiked club");
-		HumanA bob("Bob", club);
-		bob.attack();
-		club.setType("some other type of club");
-		bob.attack();
-	}
-	{
-		Weapon club = Weapon("crude spiked club");
-		HumanB jim("Jim");
-		jim.setWeapon(club);
-		jim.attack();
-		club.setType("some other type of club");
-		jim.attack();
-	}
-	return 0;
+	Fixed a;
+	Fixed b(a);
+	Fixed c;
+
+	c = b;
+
+	std::cout << a.getRawBits() <<std::endl;
+	std::cout << b.getRawBits() <<std::endl;
+	std::cout << c.getRawBits() <<std::endl;
 }
