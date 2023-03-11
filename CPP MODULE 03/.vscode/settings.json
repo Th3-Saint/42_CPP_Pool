@@ -1,0 +1,6 @@
+{
+	"files.associations": {
+		"iosfwd": "cpp",
+		"mlx.h": "c"
+	}
+}
